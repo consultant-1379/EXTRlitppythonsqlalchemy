@@ -1,0 +1,14 @@
+--- identity.py.orig	2016-10-20 16:26:42.485293236 +0100
++++ identity.py	2016-10-20 17:05:19.272629176 +0100
+@@ -145,7 +145,10 @@
+     def get(self, key, default=None):
+         if key not in self._dict:
+             return default
+-        state = self._dict[key]
++        try:
++            state = self._dict[key]
++        except KeyError:
++            return default
+         o = state.obj()
+         if o is None:
+             return default

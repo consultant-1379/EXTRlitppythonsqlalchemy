@@ -1,0 +1,9 @@
+--- setup.cfg.orig	2016-04-18 17:45:15.729758066 +0100
++++ setup.cfg	2016-04-18 17:45:23.488758057 +0100
+@@ -1,5 +1,5 @@
+ [egg_info]
+-tag_build = dev
++#tag_build = dev
+ 
+ 
+ [nosetests]
